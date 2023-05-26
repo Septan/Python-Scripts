@@ -4,10 +4,10 @@ import shutil
 # Define the folder structure you want to create
 folders = {
     "Documents": [".pdf", ".doc", ".docx", ".txt", ".rtf"],
-    "Photos": [".jpg", ".jpeg", ".png", ".gif"],
+    "Photos": [".jpg", ".jpeg", ".png", ".gif", ".PNG", ".JPG"],
     "Music": [".mp3", ".wav"],
-    "Videos": [".mp4", ".avi", ".flv", ".mkv"],
-    "Compressed": [".zip"],
+    "Videos": [".mp4", ".avi", ".flv", ".mkv", ".ts", ".m4v", ".3gp", ".wmv", ".mov", ".MOV"],
+    "Compressed": [".zip", ".rar", ".7z"],
     "Python Files": [".py"],
     "Batch Files": [".bat"]
 }
