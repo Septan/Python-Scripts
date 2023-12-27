@@ -37,7 +37,7 @@ for root, dirs, files in os.walk(src_folder):
 for root, dirs, files in os.walk(src_folder, topdown=False):
     for dir_name in dirs:
         dir_path = os.path.join(root, dir_name)
-        if not os.listdir(dir_path):
+        if not any(os.scandir(dir_path)):
             os.rmdir(dir_path)
 
 print("File organization complete!")
