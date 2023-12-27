@@ -5,6 +5,8 @@ import subprocess
 scripts = [
     "File Organizer/file_organizer.py",
     "File Organizer/unused_file_mover.py",
+    "FFMPEG Meta/meta_subtitle.py",
+    "FFMPEG Meta/meta.py",
 ]
 
 # Prompt the user to select a script
