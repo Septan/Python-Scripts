@@ -1,3 +1,24 @@
+"""
+Script Runner
+
+This script allows the user to select and run various scripts from a list. It supports Python (.py) and Batch (.bat) scripts.
+
+Usage:
+1. Run the script.
+2. Select a script from the displayed list.
+3. The selected script will be executed based on its file extension.
+
+Available Scripts:
+1. file_organizer.py - Organizes files in a directory.
+2. unused_file_mover.py - Moves unused files to a specified location.
+3. meta.py - Processes a batch of mkv files convert to mp4 while adding metadata information.
+4. meta_subtitle.py - Same as 3 but adds subtitles.
+5. video_hightlight_extractor.py - It extracts highlight clips based on detected scenes, saving them with audio in a specified output folder.
+
+Note: Make sure to have Python installed for Python scripts and FFMPEG for FFMPEG-related scripts.
+
+"""
+
 import os
 import subprocess
 
@@ -5,8 +26,9 @@ import subprocess
 scripts = [
     "File Organizer/file_organizer.py",
     "File Organizer/unused_file_mover.py",
-    "FFMPEG Meta/meta_subtitle.py",
-    "FFMPEG Meta/meta.py",
+    "MKV to MP4 Converter 1/meta.py",
+    "MKV to MP4 Converter 2/meta_subtitle.py",
+    "Video Highlight Extractor/video_hightlight_extractor.py",
 ]
 
 # Prompt the user to select a script
