@@ -23,21 +23,20 @@ Note: Make sure to have Python installed for Python scripts and FFMPEG for FFMPE
 import os
 import subprocess
 
-# Define the available scripts
+# Define the available scripts with descriptions
 scripts = [
-    "File Organizer/file_organizer.py",
-    "File Organizer/unused_file_mover.py",
-    "MKV to MP4 Converter 1/meta.py",
-    "MKV to MP4 Converter 2/meta_subtitle.py",
-    "Video Highlight Extractor/video_hightlight_extractor.py",
-    "Video Frame Extraction Tool/frame_extractor.py",
+    ("file_organizer.py", "Organizes files in a directory."),
+    ("unused_file_mover.py", "Moves unused files to a specified location."),
+    ("meta.py", "Processes a batch of mkv files convert to mp4 while adding metadata information."),
+    ("meta_subtitle.py", "Same as 3 but adds subtitles."),
+    ("video_hightlight_extractor.py", "It extracts highlight clips based on detected scenes, saving them with audio in a specified output folder."),
+    ("frame_extractor.py", "Extract frames from video file based on SSIM and PSNR thresholds."),
 ]
 
 # Prompt the user to select a script
 print("Available scripts:")
-for index, script_path in enumerate(scripts, start=1):
-    script_name = os.path.basename(script_path)
-    print(f"{index}. {script_name}")
+for index, (script_name, description) in enumerate(scripts, start=1):
+    print(f"{index}. {script_name} - {description}")
 
 selected_index = int(input("Enter the number of the script you want to run: "))
 
@@ -47,7 +46,8 @@ if selected_index < 1 or selected_index > len(scripts):
     exit(1)
 
 # Get the path to the selected script
-script_path = os.path.join(os.getcwd(), scripts[selected_index - 1])
+script_name, _ = scripts[selected_index - 1]
+script_path = os.path.join(os.getcwd(), "Scripts", script_name)
 
 # Determine the execution method based on the file extension
 file_extension = os.path.splitext(script_path)[1].lower()
