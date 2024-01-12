@@ -1,25 +1,16 @@
-## MKV to MP4 Converter
+## MKV to MP4 Converter with Subtitles
 
 ### Overview
 This Python script converts MKV files in a specified folder to MP4 format using FFmpeg. It preserves video, audio, and subtitle streams while adding metadata for title, audio, and subtitles.
 
 ### Usage
-1. **Clone the Repository:**
+
+1. **Run the Script:**
     ```bash
-    git clone https://github.com/your-username/mkv-to-mp4-converter.git
+    python meta_subtitle.py
     ```
 
-2. **Navigate to the Script:**
-    ```bash
-    cd mkv-to-mp4-converter
-    ```
-
-3. **Run the Script:**
-    ```bash
-    python convert.py
-    ```
-
-4. **Enter Folder Path:**
+2. **Enter Folder Path:**
     - Input the folder path when prompted.
 
 ### Requirements
