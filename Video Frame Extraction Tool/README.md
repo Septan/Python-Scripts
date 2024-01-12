@@ -27,7 +27,7 @@ You can configure the following parameters in the script:
 - `psnr_threshold`: PSNR threshold for frame clarity (default: 20.0)
 - `max_photos`: Maximum number of frames to extract (default: 200)
 
-### Loggiing
+### Logging
 
 The script logs information to `extraction_log.log`.
 
