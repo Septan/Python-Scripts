@@ -32,6 +32,7 @@ This Python script utilizes the scenedetect library to perform content-aware sce
 ### Usage Example
 ```python
 python video_highlight_extractor.py
+```
 
 ### Configuration
 - Input Folder: `folder_input_path`
