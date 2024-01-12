@@ -3,12 +3,17 @@ import subprocess
 
 # Define the available scripts with descriptions
 scripts = [
+<<<<<<< HEAD
     ("File Organizer/file_organizer.py", "Organizes files in a directory."),
     ("File Organizer/unused_file_mover.py", "Moves unused files to a specified location."),
     ("MKV to MP4 Converter 1/meta.py", "Processes a batch of mkv files convert to mp4 while adding metadata information."),
     ("MKV to MP4 Converter 2/meta_subtitle.py", "Same as 3 but adds subtitles."),
     ("Video Highlight Extractor/video_hightlight_extractor.py", "It extracts highlight clips based on detected scenes, saving them with audio in a specified output folder."),
     ("Video Frame Extraction Tool/frame_extractor.py", "Extract frames from video file based on SSIM and PSNR thresholds."),
+=======
+    "File Organizer/file_organizer.py",
+    "File Organizer/unused_file_mover.py",
+>>>>>>> parent of 5b6e871 (Update master.py)
 ]
 
 # Display available scripts with descriptions
