@@ -33,12 +33,13 @@ scripts = [
     ("frame_extractor.py", "Extract frames from video file based on SSIM and PSNR thresholds."),
 ]
 
-# Prompt the user to select a script
+# Display available scripts with descriptions
 print("Available scripts:")
 for index, (script_name, description) in enumerate(scripts, start=1):
-    print(f"{index}. {script_name} - {description}")
+    print(f"{index}. {script_name.ljust(30)} - {description}")
 
-selected_index = int(input("Enter the number of the script you want to run: "))
+# Prompt the user to select a script
+selected_index = int(input("\nEnter the number of the script you want to run: "))
 
 # Validate the user's input
 if selected_index < 1 or selected_index > len(scripts):
