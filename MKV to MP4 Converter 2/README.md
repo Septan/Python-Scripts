@@ -11,7 +11,7 @@ This Python script converts MKV files in a specified folder to MP4 format using 
     ```
 
 2. **Enter Folder Path:**
-   - Input the folder path when prompted.
+- Input the folder path when prompted.
 
 ### Requirements
 - Python 3.x
