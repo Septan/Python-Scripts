@@ -1,4 +1,4 @@
-## Script Name: Video Highlight Extractor
+## Video Highlight Extractor
 
 ### Description
 This Python script utilizes the scenedetect library to perform content-aware scene detection on a collection of video files. It extracts highlight clips based on detected scenes, saving them with audio in a specified output folder.
@@ -32,6 +32,7 @@ This Python script utilizes the scenedetect library to perform content-aware sce
 ### Usage Example
 ```python
 python video_highlight_extractor.py
+```
 
 ### Configuration
 - Input Folder: `folder_input_path`
