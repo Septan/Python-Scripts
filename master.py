@@ -14,6 +14,7 @@ Available Scripts:
 3. meta.py - Processes a batch of mkv files convert to mp4 while adding metadata information.
 4. meta_subtitle.py - Same as 3 but adds subtitles.
 5. video_hightlight_extractor.py - It extracts highlight clips based on detected scenes, saving them with audio in a specified output folder.
+6. frame_extractor.py - Extract frames from video file based on SSIM and PSNR thresholds.
 
 Note: Make sure to have Python installed for Python scripts and FFMPEG for FFMPEG-related scripts.
 
@@ -29,6 +30,7 @@ scripts = [
     "MKV to MP4 Converter 1/meta.py",
     "MKV to MP4 Converter 2/meta_subtitle.py",
     "Video Highlight Extractor/video_hightlight_extractor.py",
+    "Video Frame Extraction Tool/frame_extractor.py",
 ]
 
 # Prompt the user to select a script
