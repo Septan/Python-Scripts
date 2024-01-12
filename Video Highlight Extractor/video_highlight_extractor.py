@@ -57,7 +57,7 @@ def extract_highlights(input_video_path, output_folder):
     return extracted_scenes
 
 if __name__ == "__main__":
-    input_folder = "folder_input_path"
+    input_folder = input("Enter the folder path where the videos are located: ")
     output_folder = "highlight_clips"
     
     if not os.path.exists(output_folder):
