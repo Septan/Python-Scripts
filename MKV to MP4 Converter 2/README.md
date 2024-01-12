@@ -28,4 +28,3 @@ This Python script converts MKV files in a specified folder to MP4 format using 
 3. **Install Dependencies:**
    ```bash
    pip install -r requirements.txt
-  ```
