@@ -58,7 +58,7 @@ def extract_highlights(input_video_path, output_folder):
 
 if __name__ == "__main__":
     input_folder = input("Enter the folder path where the videos are located: ")
-    output_folder = "highlight_clips"
+    output_folder = os.path.join(input_folder, "highlight_clips")  # Modify this line
     
     if not os.path.exists(output_folder):
         os.makedirs(output_folder)
