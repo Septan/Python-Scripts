@@ -1,6 +1,7 @@
 import os
 import cv2
 import warnings
+import subprocess
 from scenedetect import VideoManager, SceneManager
 from scenedetect.detectors import ContentDetector
 from tqdm import tqdm
@@ -15,9 +16,6 @@ def extract_highlights(input_video_path, output_folder):
     # Create a scene manager and add the ContentDetector
     scene_manager = SceneManager()
     scene_manager.add_detector(ContentDetector())
-    
-    # Set the video manager options
-    video_manager.set_downscale_factor()
     
     # Start the video manager
     video_manager.start()
@@ -45,15 +43,18 @@ def extract_highlights(input_video_path, output_folder):
         if not os.path.exists(output_path):
             print(f"Extracting Scene {i + 1}: Start Time = {start_time}, End Time = {end_time}")
             
-            # Use ffmpeg to extract the scene as a separate video with audio
-            cmd = (
-                f"ffmpeg -i {input_video_path} -ss {start_time} -to {end_time} -c:v copy -c:a aac -strict experimental {output_path}"
-            )
+            # Use subprocess to execute ffmpeg command
+            cmd = [
+                "ffmpeg", "-i", input_video_path, "-ss", str(start_time), "-to", str(end_time),
+                "-c:v", "copy", "-c:a", "aac", "-strict", "experimental", output_path
+            ]
             
-            os.system(cmd)
-            
-            extracted_scenes.append((start_time, end_time))
-    
+            try:
+                subprocess.run(cmd, check=True)
+                extracted_scenes.append((start_time, end_time))
+            except subprocess.CalledProcessError as e:
+                print(f"Error extracting scene {i + 1}: {e}")
+
     return extracted_scenes
 
 if __name__ == "__main__":
