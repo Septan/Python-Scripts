@@ -9,6 +9,7 @@ scripts = [
     ("MKV to MP4 Converter 2/meta_subtitle.py", "Same as 3 but adds subtitles."),
     ("Video Highlight Extractor/video_highlight_extractor.py", "It extracts highlight clips based on detected scenes, saving them with audio in a specified output folder."),
     ("Video Frame Extraction Tool/frame_extractor.py", "Extract frames from video file based on SSIM and PSNR thresholds."),
+    ("Album Cover Extractor/extract_album_art.py", "Extract's album art from flac file."),
 ]
 
 # Display available scripts with descriptions
